@@ -22,7 +22,12 @@ class ExpenceTab extends StatelessWidget {
                 child: ListTile(
                   title: Text(category.name),
                   leading: Text('12/7/2022'),
-                  trailing: Icon(Icons.delete_forever),
+                  trailing: IconButton(
+                    icon: Icon(Icons.delete_forever),
+                    onPressed: () {
+                      CategoryDb.instance.deleteCategory(category.id);
+                    },
+                  ),
                 ),
               );
             }),
