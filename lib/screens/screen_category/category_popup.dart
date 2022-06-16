@@ -7,7 +7,7 @@ import 'package:money_manager/models/category_model/category_model.dart';
 ValueNotifier<CategoryType> typeNotifier = ValueNotifier(CategoryType.income);
 final TextEditingController _textConroller = TextEditingController();
 Future<void> CategoryPopup(BuildContext context) async {
-  showDialog(
+ await showDialog(
       context: context,
       builder: (ctx) {
         return SimpleDialog(
